@@ -1,0 +1,57 @@
+{
+  "config": {
+    "as_of": "2026-06-17T07:45:00+05:30",
+    "data_dir": "data",
+    "out_dir": "outputs\\20260617T074500+0530",
+    "thresholds": {
+      "completed_frac": 0.97,
+      "hist_frac_window": 0.05,
+      "jump_reset_after": 5,
+      "max_clock_ahead_s": 60.0,
+      "max_device_speed_kmph": 150.0,
+      "max_implied_kmph": 120.0,
+      "min_recent_fixes": 3,
+      "off_route_max_m": 1000.0,
+      "origin_radius_m": 300.0,
+      "push_min": 5.0,
+      "service_area": [
+        18.8,
+        19.4,
+        72.7,
+        73.2
+      ],
+      "silence_min": 10.0,
+      "smoothing_fixes": 3,
+      "trip_post_buffer_min": 45.0,
+      "trip_pre_buffer_min": 20.0
+    },
+    "tz": "IST"
+  },
+  "counts": {
+    "issues_by_code": {
+      "DUPLICATE_FIX": 1,
+      "DUPLICATE_PING_ID": 2,
+      "IMPLAUSIBLE_SPEED_FIELD": 1,
+      "OUTSIDE_SERVICE_AREA": 3,
+      "UNPARSEABLE_RECORDED_AT": 1
+    },
+    "live_trips": 7,
+    "pings_accepted_for_position": 3809,
+    "pings_held_recorded_before_received_after": 146,
+    "pings_known_at_as_of": 3813,
+    "pings_total": 4465,
+    "verdicts": {
+      "CALL_DRIVER": 2,
+      "HOLD": 3,
+      "NO_VERDICT": 1,
+      "PUSH_LATE": 1
+    }
+  },
+  "inputs_sha256": {
+    "bookings.csv": "e385117001aafdec735e3e483111267be2c52a6ac3e021a4b48966bb716e5726",
+    "gps_pings.csv": "e957f801c4f911290717f248bcf1e69bc9541a8f5fa1469fbc300d7d379b66d9",
+    "routes.csv": "c3aec9697d98556bee585e09982b47a8fb6a0bcfa5d9ef7b634b8aefd618af05",
+    "stops.csv": "e3d313e281cb1410b8f2a9a86c344703c0b32c3a42fd5606a252cea16d524473",
+    "trips.csv": "6a2151ec636f6da3e36ee30e10ce9ea2161230a3511ee45a0bb02d41039b90df"
+  }
+}

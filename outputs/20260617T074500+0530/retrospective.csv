@@ -1,0 +1,8 @@
+trip_id,route_id,held_pings,held_first_rec,held_last_rec,held_median_lag_s,finding,hindsight_verdict,hindsight_late_min
+TRIP_013,9,1,2026-06-17T07:45:00+05:30,2026-06-17T07:45:00+05:30,1.0,minor: 1 fix(es) in flight at cut-off,HOLD (ARRIVED),0.4
+TRIP_014,11,0,,,,,NO_VERDICT (ORIGIN_STATIONARY),58.5
+TRIP_015,12,0,,,,,PUSH_LATE 10 min (LATE_VS_SCHEDULE),10.0
+TRIP_016,14,145,2026-06-17T06:57:13+05:30,2026-06-17T07:44:46+05:30,5400.0,"DELIVERY_DELAY: device kept fixing until 07:44:46; those fixes arrived ~90 min late. Live silence was a delivery fault, not a stopped vehicle.",HOLD (ON_SCHEDULE),0.6
+TRIP_017,17,0,,,,VEHICLE_SILENT_CONFIRMED: no fix recorded during the silence arrived later either; device never reported again in the extract,CALL_DRIVER (TELEMETRY_SILENT),-8.5
+TRIP_018,21,0,,,,,HOLD (ON_SCHEDULE),-0.2
+TRIP_019,21,0,,,,,HOLD (ON_SCHEDULE),1.1

@@ -1,0 +1,19 @@
+﻿As of 2026-06-17T07:45:00+05:30  (service date 2026-06-17, knowledge clock = received_at)
+
+| # | route | trip | verdict | reason | action | note |
+|---|---|---|---|---|---|---|
+| 1 | 11 Borivali ΓåÆ BKC | TRIP_014 (V-06, op 5, 8 riders) | `NO_VERDICT` | ORIGIN_STATIONARY | ops: confirm departure | device within 14 m of origin 59 min after departure time; device position may not be bus position |
+| 2 | 17 Vashi ΓåÆ Worli | TRIP_017 (V-05, op 5, 16 riders) | `CALL_DRIVER` | TELEMETRY_SILENT | driver: confirm vehicle status; telemetry: check device/ingestion | nothing received for 17 min (last 07:27:42, 71% along); vehicle stop vs delivery fault not distinguishable at cut-off |
+| 3 | 14 Kandivali ΓåÆ Lower Parel | TRIP_016 (V-04, op 6, 12 riders) | `CALL_DRIVER` | TELEMETRY_SILENT | driver: confirm vehicle status; telemetry: check device/ingestion | nothing received for 48 min (last 06:56:57, 22% along); vehicle stop vs delivery fault not distinguishable at cut-off |
+| 4 | 12 Mulund ΓåÆ Andheri E | TRIP_015 (V-10, op 5, 9 riders) | `PUSH_LATE 10 min` | LATE_VS_SCHEDULE | rider push | +10.0 min at 50% along, Mon/Tue at this point +1.0 (n=37) |
+| 5 | 9 Thane ΓåÆ Powai | TRIP_013 (V-11, op 5, 12 riders) | `HOLD` | ARRIVED | none | reached terminus at 07:43, +0.3 min vs schedule |
+| 6 | 21 Ghatkopar ΓåÆ BKC | TRIP_018 (V-03, op 5, 6 riders) | `HOLD` | ON_SCHEDULE | none | -0.2 min at 63% along, Mon/Tue at this point +1.3 (n=25) |
+| 7 | 21 Ghatkopar ΓåÆ BKC | TRIP_019 (V-09, op 7, 6 riders) | `HOLD` | ON_SCHEDULE | none | +1.1 min at 30% along, Mon/Tue at this point +0.5 (n=23) |
+
+Retrospective (hindsight; NOT used for the verdicts above):
+  TRIP_013 route 9: hindsight=HOLD (ARRIVED)  minor: 1 fix(es) in flight at cut-off
+  TRIP_016 route 14: hindsight=HOLD (ON_SCHEDULE)  DELIVERY_DELAY: device kept fixing until 07:44:46; those fixes arrived ~90 min late. Live silence was a delivery fault, not a stopped vehicle.
+  TRIP_017 route 17: hindsight=CALL_DRIVER (TELEMETRY_SILENT)  VEHICLE_SILENT_CONFIRMED: no fix recorded during the silence arrived later either; device never reported again in the extract
+
+Counts: {'pings_total': 4465, 'pings_known_at_as_of': 3813, 'pings_held_recorded_before_received_after': 146, 'pings_accepted_for_position': 3809, 'live_trips': 7, 'verdicts': {'CALL_DRIVER': 2, 'HOLD': 3, 'NO_VERDICT': 1, 'PUSH_LATE': 1}, 'issues_by_code': {'DUPLICATE_FIX': 1, 'DUPLICATE_PING_ID': 2, 'IMPLAUSIBLE_SPEED_FIELD': 1, 'OUTSIDE_SERVICE_AREA': 3, 'UNPARSEABLE_RECORDED_AT': 1}}
+Outputs: outputs\20260617T074500+0530

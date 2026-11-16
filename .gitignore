@@ -1,0 +1,40 @@
+# private interview prep: never publish
+INTERVIEW_PREP.md
+
+# python caches / build
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# virtual environments
+.venv/
+venv/
+env/
+.env/
+
+# credentials, tokens, secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*token*
+*secret*
+credentials*.json
+.netrc
+
+# temporary / scratch files
+*.tmp
+*.log
+*_out.txt
+*.duckdb
+*.duckdb.wal
+~$*
+.DS_Store
+Thumbs.db
+
+# generated outputs: only the 07:45 submission run is versioned
+outputs/*
+!outputs/20260617T074500+0530/
